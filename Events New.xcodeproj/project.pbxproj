@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		7A7156221EEFE7A7002ECFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7156211EEFE7A7002ECFDC /* AppDelegate.swift */; };
-		7A7156241EEFE7A7002ECFDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7156231EEFE7A7002ECFDC /* ViewController.swift */; };
 		7A7156271EEFE7A7002ECFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A7156251EEFE7A7002ECFDC /* Main.storyboard */; };
 		7A7156291EEFE7A7002ECFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7156281EEFE7A7002ECFDC /* Assets.xcassets */; };
 		7A71562C1EEFE7A7002ECFDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A71562A1EEFE7A7002ECFDC /* LaunchScreen.storyboard */; };
+		7A7156371EEFE801002ECFDC /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7156361EEFE801002ECFDC /* EventsViewModel.swift */; };
+		7A7156391EEFE80D002ECFDC /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7156381EEFE80D002ECFDC /* Event.swift */; };
+		7A71563C1EEFED4D002ECFDC /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71563B1EEFED4D002ECFDC /* Guest.swift */; };
+		7A71563E1EF0176C002ECFDC /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71563D1EF0176C002ECFDC /* EventsTableViewController.swift */; };
+		7A7156401EF01DE6002ECFDC /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71563F1EF01DE6002ECFDC /* EventTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7A71561E1EEFE7A7002ECFDC /* Events New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Events New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7156211EEFE7A7002ECFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A7156231EEFE7A7002ECFDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7A7156261EEFE7A7002ECFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A7156281EEFE7A7002ECFDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A71562B1EEFE7A7002ECFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A71562D1EEFE7A7002ECFDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A7156361EEFE801002ECFDC /* EventsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
+		7A7156381EEFE80D002ECFDC /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		7A71563B1EEFED4D002ECFDC /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
+		7A71563D1EF0176C002ECFDC /* EventsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
+		7A71563F1EF01DE6002ECFDC /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,26 @@
 		7A7156201EEFE7A7002ECFDC /* Events New */ = {
 			isa = PBXGroup;
 			children = (
+				7A71563A1EEFE813002ECFDC /* Events View */,
 				7A7156211EEFE7A7002ECFDC /* AppDelegate.swift */,
-				7A7156231EEFE7A7002ECFDC /* ViewController.swift */,
 				7A7156251EEFE7A7002ECFDC /* Main.storyboard */,
 				7A7156281EEFE7A7002ECFDC /* Assets.xcassets */,
 				7A71562A1EEFE7A7002ECFDC /* LaunchScreen.storyboard */,
 				7A71562D1EEFE7A7002ECFDC /* Info.plist */,
 			);
 			path = "Events New";
+			sourceTree = "<group>";
+		};
+		7A71563A1EEFE813002ECFDC /* Events View */ = {
+			isa = PBXGroup;
+			children = (
+				7A71563F1EF01DE6002ECFDC /* EventTableViewCell.swift */,
+				7A71563D1EF0176C002ECFDC /* EventsTableViewController.swift */,
+				7A7156361EEFE801002ECFDC /* EventsViewModel.swift */,
+				7A7156381EEFE80D002ECFDC /* Event.swift */,
+				7A71563B1EEFED4D002ECFDC /* Guest.swift */,
+			);
+			name = "Events View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A7156241EEFE7A7002ECFDC /* ViewController.swift in Sources */,
+				7A7156401EF01DE6002ECFDC /* EventTableViewCell.swift in Sources */,
+				7A71563C1EEFED4D002ECFDC /* Guest.swift in Sources */,
+				7A7156391EEFE80D002ECFDC /* Event.swift in Sources */,
+				7A7156371EEFE801002ECFDC /* EventsViewModel.swift in Sources */,
+				7A71563E1EF0176C002ECFDC /* EventsTableViewController.swift in Sources */,
 				7A7156221EEFE7A7002ECFDC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
