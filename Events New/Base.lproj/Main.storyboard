@@ -13,19 +13,17 @@
         <!--Events in Bangalore-->
         <scene sceneID="JPS-gt-McB">
             <objects>
-                <customObject id="aE6-36-Gdu" customClass="EventsViewModel" customModule="Events_New" customModuleProvider="target"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2o-Au-ZUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="DhL-5v-h5s" customClass="EventsTableViewController" customModule="Events_New" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="142" sectionHeaderHeight="28" sectionFooterHeight="28" id="kS3-dp-5p0">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="176" sectionHeaderHeight="28" sectionFooterHeight="28" id="kS3-dp-5p0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="142" id="p9c-bp-BHs" customClass="EventTableViewCell" customModule="Events_New" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="142"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" rowHeight="180" id="p9c-bp-BHs" customClass="EventTableViewCell" customModule="Events_New" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="p9c-bp-BHs" id="RY1-ic-SFS">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rtv-tm-D8V">
@@ -56,26 +54,26 @@
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="BENGALURU" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbb-E0-LSp">
-                                            <rect key="frame" x="8" y="117.5" width="77.5" height="16"/>
+                                            <rect key="frame" x="8" y="155.5" width="77.5" height="16"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkQ-Jh-DFX">
-                                            <rect key="frame" x="93.5" y="118" width="1" height="16"/>
+                                            <rect key="frame" x="93.5" y="155.5" width="1" height="16"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="1" id="tDr-Mx-yha"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snehal, Manoj and 21 others attending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwE-x2-L4l">
-                                            <rect key="frame" x="102" y="117" width="265" height="16"/>
+                                            <rect key="frame" x="102" y="155.5" width="265" height="16"/>
                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="41u-C9-6K9">
-                                            <rect key="frame" x="8" y="90.5" width="359" height="21"/>
+                                            <rect key="frame" x="8" y="128.5" width="359" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -117,8 +115,10 @@
                         <outlet property="eventsViewModel" destination="aE6-36-Gdu" id="mQj-XY-gxP"/>
                     </connections>
                 </tableViewController>
+                <customObject id="aE6-36-Gdu" customClass="EventsViewModel" customModule="Events_New" customModuleProvider="target"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2o-Au-ZUx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="119"/>
+            <point key="canvasLocation" x="764" y="118.29085457271366"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wyv-fr-9hj">

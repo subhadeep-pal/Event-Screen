@@ -47,6 +47,8 @@ class EventsTableViewController: UITableViewController {
         cell.eventNameLabel.text = eventsViewModel.nameForEvent(index: indexPath.row)
         cell.timeLabel.text = eventsViewModel.timeForEvent(index: indexPath.row)
         cell.locationLabel.text = eventsViewModel.locationForEvent(index: indexPath.row)
+        cell.dateLabel.text = eventsViewModel.dateForEvent(index: indexPath.row)
+        cell.guestListLabel.text = eventsViewModel.guestAttentingDescriptionForEvent(index: indexPath.row)
         return cell
     }
     

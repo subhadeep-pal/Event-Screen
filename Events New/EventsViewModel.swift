@@ -50,8 +50,37 @@ class EventsViewModel: NSObject {
         return dateFormatter.string(from: events[index].startDate)
     }
     
+    func dateForEvent(index: Int) -> String {
+        
+        let startDate = events[index].startDate
+        
+        let calendar = Calendar.current
+        if calendar.isDateInToday(startDate) {
+            return "TODAY"
+        } else if  calendar.isDateInTomorrow(startDate) {
+            return "TOMORROW"
+        } else {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "E, d MMM"
+            let dateStr = dateFormatter.string(from: startDate)
+            return dateStr.uppercased()
+        }
+    }
+    
     func locationForEvent(index: Int) -> String {
         return "\(events[index].location)".uppercased()
+    }
+    
+    func guestAttentingDescriptionForEvent(index: Int) -> String {
+        let guestList = events[index].guestList
+        
+        if guestList.count == 0 {
+            return ""
+        } else if guestList.count == 1 {
+            return "\(guestList[0].firstName.capitalized) is attending"
+        } else {
+            return "\(guestList[0].firstName.capitalized), \(guestList[1].firstName.capitalized) and \(guestList.count - 2) others attending"
+        }
     }
 
 }
