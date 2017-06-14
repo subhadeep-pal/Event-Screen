@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14EE6F6B1EF1992E00D93F20 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */; };
+		14EE6F6D1EF1B64400D93F20 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */; };
 		7A7156221EEFE7A7002ECFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7156211EEFE7A7002ECFDC /* AppDelegate.swift */; };
 		7A7156271EEFE7A7002ECFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A7156251EEFE7A7002ECFDC /* Main.storyboard */; };
 		7A7156291EEFE7A7002ECFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7156281EEFE7A7002ECFDC /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		7A71561E1EEFE7A7002ECFDC /* Events New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Events New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7156211EEFE7A7002ECFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A7156261EEFE7A7002ECFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14EE6F6E1EF1BB8400D93F20 /* Event Details */ = {
+			isa = PBXGroup;
+			children = (
+				14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */,
+			);
+			name = "Event Details";
+			sourceTree = "<group>";
+		};
+		14EE6F8D1EF1BD7B00D93F20 /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+				14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */,
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
 		7A7156151EEFE7A7002ECFDC = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +96,8 @@
 		7A7156201EEFE7A7002ECFDC /* Events New */ = {
 			isa = PBXGroup;
 			children = (
+				14EE6F8D1EF1BD7B00D93F20 /* Helper Classes */,
+				14EE6F6E1EF1BB8400D93F20 /* Event Details */,
 				7A71563A1EEFE813002ECFDC /* Events View */,
 				7A7156211EEFE7A7002ECFDC /* AppDelegate.swift */,
 				7A7156251EEFE7A7002ECFDC /* Main.storyboard */,
@@ -238,7 +260,9 @@
 				7A7156451EF11090002ECFDC /* FilterEventsTableViewCell.swift in Sources */,
 				7A7156401EF01DE6002ECFDC /* EventTableViewCell.swift in Sources */,
 				7A7156421EF10F47002ECFDC /* FilterEventsTableViewController.swift in Sources */,
+				14EE6F6B1EF1992E00D93F20 /* EventDetailViewController.swift in Sources */,
 				7A71563C1EEFED4D002ECFDC /* Guest.swift in Sources */,
+				14EE6F6D1EF1B64400D93F20 /* UIViewX.swift in Sources */,
 				7A7156471EF1109D002ECFDC /* FilterEventsViewModel.swift in Sources */,
 				7A71564B1EF1178D002ECFDC /* SlideInPresentationAnimator.swift in Sources */,
 				7A7156391EEFE80D002ECFDC /* Event.swift in Sources */,

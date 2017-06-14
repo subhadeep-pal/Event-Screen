@@ -100,6 +100,10 @@ class EventsTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "eventDetailSegue", sender: self)
+    }
+    
 
 }
 
