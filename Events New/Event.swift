@@ -29,7 +29,6 @@ class Event: NSObject {
     let eventImageUrl: String
     
     init(name: String, address: String, location: String, guestList: [Guest], startDate: String, endDate: String, dressCode: String, ticketCost: Int, eventImageUrl: String, isSoldOut: Bool = false) {
-        
         self.name = name
         self.address = address
         self.ticketCost = ticketCost

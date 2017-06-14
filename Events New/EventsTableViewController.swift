@@ -88,14 +88,34 @@ class EventsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "filterSegue" {
+            let filterVC = segue.destination
+            filterVC.transitioningDelegate = self
+            filterVC.modalPresentationStyle = .custom
+        }
     }
-    */
+    
 
+}
+
+extension EventsTableViewController: UIViewControllerTransitioningDelegate {
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let presentationController = SlideInPresentationController(presentedViewController: presented,
+                                                                   presenting: presenting,
+                                                                   direction: .right)
+        return presentationController
+    }
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInPresentationAnimator(direction: .right, isPresentation: true)
+        
+    }
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SlideInPresentationAnimator(direction: .right, isPresentation: false)
+    }
 }
