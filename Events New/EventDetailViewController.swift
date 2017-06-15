@@ -10,11 +10,20 @@ import UIKit
 
 class EventDetailViewController: UIViewController {
 
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    var detailsViewController : UIViewController!
+    var guestListViewController : GuestListViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
         setUpNavigationBar()
+        setUpChildViewControllers()
+        switchViews()
     }
     
     func setUpNavigationBar() {
@@ -28,6 +37,18 @@ class EventDetailViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = newBackButton
     }
     
+    func setUpChildViewControllers() {
+        
+        
+        detailsViewController = storyboard?.instantiateViewController(withIdentifier: "UnbookedEventDetails") as! UnbookedEventDetailViewController
+        addChildViewController(detailsViewController)
+        print(self.containerView.frame.height)
+        
+        guestListViewController = storyboard?.instantiateViewController(withIdentifier: "GuestListTableViewController") as! GuestListViewController
+        addChildViewController(guestListViewController)
+        
+        print(self.containerView.frame.height)
+    }
     
     func backTapped(sender: UIBarButtonItem) {
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)
@@ -41,6 +62,27 @@ class EventDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func switchViews(_ sender: UISegmentedControl) {
+        switchViews()
+    }
+    
+    func switchViews() {
+        if segmentedControl.selectedSegmentIndex == 0 {
+            guestListViewController.view.removeFromSuperview()
+            guestListViewController.removeFromParentViewController()
+            
+            detailsViewController.view.frame = CGRect(x: 0, y: 0, width: self.containerView.frame.width, height: self.containerView.frame.height)
+            containerView.addSubview(detailsViewController.view)
+            detailsViewController.didMove(toParentViewController: self)
+        } else {
+            detailsViewController.view.removeFromSuperview()
+            detailsViewController.removeFromParentViewController()
+            
+            guestListViewController.view.frame = CGRect(x: 0, y: 0, width: self.containerView.frame.width, height: self.containerView.frame.height)
+            containerView.addSubview(guestListViewController.view)
+            guestListViewController.didMove(toParentViewController: self)
+        }
+    }
 
     /*
     // MARK: - Navigation

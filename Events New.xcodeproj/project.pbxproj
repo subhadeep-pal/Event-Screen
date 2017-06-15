@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14A56AAB1EF3157B0051FBC3 /* GuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A56AAA1EF3157B0051FBC3 /* GuestListViewController.swift */; };
 		14EE6F6B1EF1992E00D93F20 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */; };
 		14EE6F6D1EF1B64400D93F20 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */; };
+		14EE6F8F1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F8E1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift */; };
+		14EE6F911EF30B4800D93F20 /* BookedEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F901EF30B4800D93F20 /* BookedEventDetailViewController.swift */; };
 		7A7156221EEFE7A7002ECFDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7156211EEFE7A7002ECFDC /* AppDelegate.swift */; };
 		7A7156271EEFE7A7002ECFDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A7156251EEFE7A7002ECFDC /* Main.storyboard */; };
 		7A7156291EEFE7A7002ECFDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A7156281EEFE7A7002ECFDC /* Assets.xcassets */; };
@@ -28,8 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14A56AAA1EF3157B0051FBC3 /* GuestListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestListViewController.swift; sourceTree = "<group>"; };
 		14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
+		14EE6F8E1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnbookedEventDetailViewController.swift; sourceTree = "<group>"; };
+		14EE6F901EF30B4800D93F20 /* BookedEventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookedEventDetailViewController.swift; sourceTree = "<group>"; };
 		7A71561E1EEFE7A7002ECFDC /* Events New.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Events New.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A7156211EEFE7A7002ECFDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7A7156261EEFE7A7002ECFDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,6 +71,9 @@
 			isa = PBXGroup;
 			children = (
 				14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */,
+				14EE6F8E1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift */,
+				14EE6F901EF30B4800D93F20 /* BookedEventDetailViewController.swift */,
+				14A56AAA1EF3157B0051FBC3 /* GuestListViewController.swift */,
 			);
 			name = "Event Details";
 			sourceTree = "<group>";
@@ -264,12 +273,15 @@
 				7A71563C1EEFED4D002ECFDC /* Guest.swift in Sources */,
 				14EE6F6D1EF1B64400D93F20 /* UIViewX.swift in Sources */,
 				7A7156471EF1109D002ECFDC /* FilterEventsViewModel.swift in Sources */,
+				14EE6F8F1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift in Sources */,
+				14EE6F911EF30B4800D93F20 /* BookedEventDetailViewController.swift in Sources */,
 				7A71564B1EF1178D002ECFDC /* SlideInPresentationAnimator.swift in Sources */,
 				7A7156391EEFE80D002ECFDC /* Event.swift in Sources */,
 				7A7156371EEFE801002ECFDC /* EventsViewModel.swift in Sources */,
 				7A71563E1EF0176C002ECFDC /* EventsTableViewController.swift in Sources */,
 				7A7156491EF11714002ECFDC /* SlideInPresentationController.swift in Sources */,
 				7A7156221EEFE7A7002ECFDC /* AppDelegate.swift in Sources */,
+				14A56AAB1EF3157B0051FBC3 /* GuestListViewController.swift in Sources */,
 				7A7156531EF15373002ECFDC /* FilterEventsSectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
