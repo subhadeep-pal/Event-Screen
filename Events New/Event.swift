@@ -27,13 +27,15 @@ class Event: NSObject {
     let dressCode: String
     let ticketCost: Int
     let eventImageUrl: String
+    let isbooked : Bool
     
-    init(name: String, address: String, location: String, guestList: [Guest], startDate: String, endDate: String, dressCode: String, ticketCost: Int, eventImageUrl: String, isSoldOut: Bool = false) {
+    init(name: String, address: String, location: String, guestList: [Guest], startDate: String, endDate: String, dressCode: String, ticketCost: Int, eventImageUrl: String,isBooked: Bool = false, isSoldOut: Bool = false) {
         self.name = name
         self.address = address
         self.ticketCost = ticketCost
         self.dressCode = dressCode
         self.isSoldOut = isSoldOut
+        self.isbooked = isBooked
         self.guestList = guestList
         self.eventImageUrl = eventImageUrl
         

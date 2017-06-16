@@ -12,18 +12,35 @@ class EventDetailViewController: UIViewController {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var eventDateLabel: UILabel!
+    @IBOutlet weak var eventTimeLabel: UILabel!
     
-    var detailsViewController : UIViewController!
+    
+    var eventViewModel: EventDetailViewModel!
+    
+    var detailsViewController : DetailViewController!
     var guestListViewController : GuestListViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         // Do any additional setup after loading the view.
         setUpNavigationBar()
         setUpChildViewControllers()
         switchViews()
+        
+        setUpView()
+    }
+    
+    
+    func initializeViewModel(event: Event) {
+        self.eventViewModel = EventDetailViewModel(event: event)
+    }
+    
+    
+    func setUpView() {
+        title = eventViewModel.eventName()
+        eventDateLabel.text = eventViewModel.eventDate()
+        eventTimeLabel.text = eventViewModel.eventTime()
     }
     
     func setUpNavigationBar() {
@@ -38,16 +55,16 @@ class EventDetailViewController: UIViewController {
     }
     
     func setUpChildViewControllers() {
-        
-        
-        detailsViewController = storyboard?.instantiateViewController(withIdentifier: "UnbookedEventDetails") as! UnbookedEventDetailViewController
+        if eventViewModel.isEventBooked() {
+            detailsViewController = storyboard?.instantiateViewController(withIdentifier: "BookedEventDetails") as! BookedEventDetailViewController
+        } else {
+            detailsViewController = storyboard?.instantiateViewController(withIdentifier: "UnbookedEventDetails") as! UnbookedEventDetailViewController
+        }
+        detailsViewController.setUpViewModel(event: eventViewModel.getEvent())
         addChildViewController(detailsViewController)
-        print(self.containerView.frame.height)
         
         guestListViewController = storyboard?.instantiateViewController(withIdentifier: "GuestListTableViewController") as! GuestListViewController
         addChildViewController(guestListViewController)
-        
-        print(self.containerView.frame.height)
     }
     
     func backTapped(sender: UIBarButtonItem) {
@@ -83,15 +100,4 @@ class EventDetailViewController: UIViewController {
             guestListViewController.didMove(toParentViewController: self)
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

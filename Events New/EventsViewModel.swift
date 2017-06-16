@@ -25,7 +25,7 @@ class EventsViewModel: NSObject {
         
         events = [
             Event(name: "For the love of coffee!", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-07-29 19:30:00", endDate: "2017-07-29 21:30:00", dressCode: "Smart Casuals", ticketCost: 700, eventImageUrl: ""),
-            Event(name: "Aero India 2017", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-06-16 11:00:00", endDate: "2017-06-16 21:30:00", dressCode: "Smart Casuals", ticketCost: 700, eventImageUrl: ""),
+            Event(name: "Aero India 2017", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-06-16 11:00:00", endDate: "2017-06-16 21:30:00", dressCode: "Smart Casuals", ticketCost: 700, eventImageUrl: "", isBooked: true),
             Event(name: "Hot air balloon safari", address: "XYZ Street", location: "Pune", guestList: guestList, startDate: "2017-06-17 11:00:00", endDate: "2017-06-17 13:00:00", dressCode: "Smart Casuals", ticketCost: 700, eventImageUrl: "", isSoldOut: true),
             Event(name: "For the love of coffee!", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-08-02 19:30:00", endDate: "2017-08-02 21:30:00", dressCode: "Smart Casuals", ticketCost: 700, eventImageUrl: ""),
             Event(name: "Aero India 2017", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-06-15 11:00:00", endDate: "2017-06-15 21:30:00", dressCode: "Smart Casuals", ticketCost: 700, eventImageUrl: ""),
@@ -81,6 +81,10 @@ class EventsViewModel: NSObject {
         } else {
             return "\(guestList[0].firstName.capitalized), \(guestList[1].firstName.capitalized) and \(guestList.count - 2) others attending"
         }
+    }
+    
+    func eventForIndex(index: Int) -> Event {
+        return events[index]
     }
 
 }

@@ -8,8 +8,12 @@
 
 import UIKit
 
-class BookedEventDetailViewController: UIViewController {
+class BookedEventDetailViewController: DetailViewController {
 
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    var isDescriptionExpanded = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,5 +35,18 @@ class BookedEventDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func readMoreTapped(_ sender: UIButton) {
+        if !isDescriptionExpanded {
+            sender.setTitle("less", for: .normal)
+            descriptionLabel.numberOfLines = 0
+            isDescriptionExpanded = true
+        } else {
+            sender.setTitle("read more", for: .normal)
+            descriptionLabel.numberOfLines = 3
+            isDescriptionExpanded = false
+        }
+        
+    }
 
 }
