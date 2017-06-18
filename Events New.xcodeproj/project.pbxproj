@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1426BF781EF6556E00375EBD /* GuestListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426BF771EF6556E00375EBD /* GuestListTableViewCell.swift */; };
+		1426BF7A1EF6747300375EBD /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426BF791EF6747300375EBD /* UIImageViewX.swift */; };
+		1426BF7C1EF6955700375EBD /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426BF7B1EF6955700375EBD /* UIButtonX.swift */; };
 		14A56AAB1EF3157B0051FBC3 /* GuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A56AAA1EF3157B0051FBC3 /* GuestListViewController.swift */; };
+		14D962581EF44C3700242FB1 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D962551EF44C3700242FB1 /* DetailsViewModel.swift */; };
+		14D962591EF44C3700242FB1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D962561EF44C3700242FB1 /* DetailViewController.swift */; };
+		14D9625A1EF44C3700242FB1 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D962571EF44C3700242FB1 /* EventDetailViewModel.swift */; };
 		14EE6F6B1EF1992E00D93F20 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */; };
 		14EE6F6D1EF1B64400D93F20 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */; };
 		14EE6F8F1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F8E1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift */; };
@@ -31,7 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1426BF771EF6556E00375EBD /* GuestListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestListTableViewCell.swift; sourceTree = "<group>"; };
+		1426BF791EF6747300375EBD /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
+		1426BF7B1EF6955700375EBD /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
 		14A56AAA1EF3157B0051FBC3 /* GuestListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestListViewController.swift; sourceTree = "<group>"; };
+		14D962551EF44C3700242FB1 /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		14D962561EF44C3700242FB1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		14D962571EF44C3700242FB1 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
 		14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		14EE6F8E1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnbookedEventDetailViewController.swift; sourceTree = "<group>"; };
@@ -67,13 +79,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14EE6F6E1EF1BB8400D93F20 /* Event Details */ = {
+		1426BF711EF4F3B500375EBD /* Details Section */ = {
+			isa = PBXGroup;
+			children = (
+				14D962561EF44C3700242FB1 /* DetailViewController.swift */,
+				14EE6F8E1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift */,
+				14EE6F901EF30B4800D93F20 /* BookedEventDetailViewController.swift */,
+			);
+			name = "Details Section";
+			sourceTree = "<group>";
+		};
+		1426BF721EF4F3C000375EBD /* Guest Section */ = {
+			isa = PBXGroup;
+			children = (
+				14A56AAA1EF3157B0051FBC3 /* GuestListViewController.swift */,
+				1426BF771EF6556E00375EBD /* GuestListTableViewCell.swift */,
+			);
+			name = "Guest Section";
+			sourceTree = "<group>";
+		};
+		1426BF731EF4F3CD00375EBD /* View */ = {
 			isa = PBXGroup;
 			children = (
 				14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */,
-				14EE6F8E1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift */,
-				14EE6F901EF30B4800D93F20 /* BookedEventDetailViewController.swift */,
-				14A56AAA1EF3157B0051FBC3 /* GuestListViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1426BF761EF4F40100375EBD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				14D962551EF44C3700242FB1 /* DetailsViewModel.swift */,
+				14D962571EF44C3700242FB1 /* EventDetailViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		14EE6F6E1EF1BB8400D93F20 /* Event Details */ = {
+			isa = PBXGroup;
+			children = (
+				1426BF761EF4F40100375EBD /* ViewModel */,
+				1426BF711EF4F3B500375EBD /* Details Section */,
+				1426BF731EF4F3CD00375EBD /* View */,
+				1426BF721EF4F3C000375EBD /* Guest Section */,
 			);
 			name = "Event Details";
 			sourceTree = "<group>";
@@ -82,6 +130,8 @@
 			isa = PBXGroup;
 			children = (
 				14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */,
+				1426BF791EF6747300375EBD /* UIImageViewX.swift */,
+				1426BF7B1EF6955700375EBD /* UIButtonX.swift */,
 			);
 			name = "Helper Classes";
 			sourceTree = "<group>";
@@ -267,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A7156451EF11090002ECFDC /* FilterEventsTableViewCell.swift in Sources */,
+				1426BF7C1EF6955700375EBD /* UIButtonX.swift in Sources */,
 				7A7156401EF01DE6002ECFDC /* EventTableViewCell.swift in Sources */,
 				7A7156421EF10F47002ECFDC /* FilterEventsTableViewController.swift in Sources */,
 				14EE6F6B1EF1992E00D93F20 /* EventDetailViewController.swift in Sources */,
@@ -276,13 +327,18 @@
 				14EE6F8F1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift in Sources */,
 				14EE6F911EF30B4800D93F20 /* BookedEventDetailViewController.swift in Sources */,
 				7A71564B1EF1178D002ECFDC /* SlideInPresentationAnimator.swift in Sources */,
+				14D962591EF44C3700242FB1 /* DetailViewController.swift in Sources */,
 				7A7156391EEFE80D002ECFDC /* Event.swift in Sources */,
 				7A7156371EEFE801002ECFDC /* EventsViewModel.swift in Sources */,
+				1426BF781EF6556E00375EBD /* GuestListTableViewCell.swift in Sources */,
 				7A71563E1EF0176C002ECFDC /* EventsTableViewController.swift in Sources */,
+				14D9625A1EF44C3700242FB1 /* EventDetailViewModel.swift in Sources */,
 				7A7156491EF11714002ECFDC /* SlideInPresentationController.swift in Sources */,
 				7A7156221EEFE7A7002ECFDC /* AppDelegate.swift in Sources */,
 				14A56AAB1EF3157B0051FBC3 /* GuestListViewController.swift in Sources */,
 				7A7156531EF15373002ECFDC /* FilterEventsSectionHeader.swift in Sources */,
+				14D962581EF44C3700242FB1 /* DetailsViewModel.swift in Sources */,
+				1426BF7A1EF6747300375EBD /* UIImageViewX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DSRD6624UQ;
 				INFOPLIST_FILE = "Events New/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.learning.subhadeep.Events-New";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -420,6 +477,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DSRD6624UQ;
 				INFOPLIST_FILE = "Events New/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.learning.subhadeep.Events-New";
 				PRODUCT_NAME = "$(TARGET_NAME)";

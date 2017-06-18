@@ -11,6 +11,9 @@ import UIKit
 class BookedEventDetailViewController: DetailViewController {
 
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var dresscodeLabel: UILabel!
+    @IBOutlet weak var ticketCostLabel: UILabel!
     
     var isDescriptionExpanded = false
     
@@ -18,6 +21,7 @@ class BookedEventDetailViewController: DetailViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,20 +29,17 @@ class BookedEventDetailViewController: DetailViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func loadData() {
+        locationLabel.text = detailViewModel.address
+        dresscodeLabel.text = detailViewModel.dressCode
+        ticketCostLabel.text = detailViewModel.ticketCost
+        descriptionLabel.text = detailViewModel.eventDescription
     }
-    */
+    
     
     @IBAction func readMoreTapped(_ sender: UIButton) {
         if !isDescriptionExpanded {
-            sender.setTitle("less", for: .normal)
+            sender.setTitle("less ...", for: .normal)
             descriptionLabel.numberOfLines = 0
             isDescriptionExpanded = true
         } else {
@@ -47,6 +48,33 @@ class BookedEventDetailViewController: DetailViewController {
             isDescriptionExpanded = false
         }
         
+    }
+    
+    @IBAction func locationButtonTapped(_ sender: UIButton) {
+        // GOOGLE MAPS
+        // Marker with name : https://www.google.com/maps/search/?api=1&query=centurylink+field
+        // Marker with name : https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393&query_place_id=ChIJKxjxuaNqkFQR3CK6O1HNNqY
+        // Marker with no name : https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393
+        
+        
+        // Apple Maps
+        // Marker & Name : http://maps.apple.com/?q=47.5951518,-122.3316393
+        
+        if (UIApplication.shared.canOpenURL(URL(string:"comgooglemaps://")!)) {
+            UIApplication.shared.openURL(URL(string:"https://www.google.com/maps/search/?api=1&query=47.5951518,-122.3316393")!)
+        } else {
+            UIApplication.shared.openURL(URL(string: "http://maps.apple.com/?q=47.5951518,-122.3316393")!)
+        }
+    }
+    
+    @IBAction func callHost(_sender: UIButton) {
+        if let url = URL(string: "tel://\(detailViewModel.hostPhoneNumber)"), UIApplication.shared.canOpenURL(url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
 
 }

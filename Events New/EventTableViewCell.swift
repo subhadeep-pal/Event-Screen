@@ -15,6 +15,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var guestListLabel: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var soldoutView: UIView!
     
     
     override func awakeFromNib() {

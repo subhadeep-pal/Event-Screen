@@ -25,6 +25,26 @@ class FilterEventsViewModel: NSObject {
         sortBy = nil
     }
     
+    func getCityFilters() -> [String]? {
+        if filteredCities.count == 0 {
+            return nil
+        } else {
+            return filteredCities
+        }
+    }
+    
+    func getTypeFilters() -> [String]? {
+        if filteredType.count == 0 {
+            return nil
+        } else {
+            return filteredType
+        }
+    }
+    
+    func getSortBy() -> String? {
+        return sortBy
+    }
+    
     func numberOfFiltersForSection(section: Int) -> Int {
         switch section {
         case 0:

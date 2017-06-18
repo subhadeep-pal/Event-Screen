@@ -16,6 +16,10 @@ class EventDetailViewModel: NSObject {
         self.event = event
     }
 
+    var isSoldOut: Bool {
+        return event.isSoldOut
+    }
+    
     func eventName() -> String {
         return event.name
     }
@@ -38,5 +42,9 @@ class EventDetailViewModel: NSObject {
     
     func getEvent() -> Event {
         return event
+    }
+    
+    func textForSharing() -> String {
+        return "Text for sharing"
     }
 }

@@ -43,6 +43,13 @@ class EventsTableViewController: UITableViewController {
         cell.locationLabel.text = eventsViewModel.locationForEvent(index: indexPath.row)
         cell.dateLabel.text = eventsViewModel.dateForEvent(index: indexPath.row)
         cell.guestListLabel.text = eventsViewModel.guestAttentingDescriptionForEvent(index: indexPath.row)
+        
+        if eventsViewModel.isEventSoldOut(index: indexPath.row) {
+            cell.soldoutView.isHidden = false
+        } else {
+            cell.soldoutView.isHidden = true
+        }
+        
         return cell
     }
     
@@ -53,9 +60,11 @@ class EventsTableViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "filterSegue" {
-            let filterVC = segue.destination
-            filterVC.transitioningDelegate = self
-            filterVC.modalPresentationStyle = .custom
+            let navVC = segue.destination as! UINavigationController
+            navVC.transitioningDelegate = self
+            navVC.modalPresentationStyle = .custom
+            let filterVC = navVC.viewControllers.first as! FilterEventsTableViewController
+            filterVC.delegate = self
         } else if segue.identifier == "eventDetailSegue" {
             let eventDetailVC = segue.destination as! EventDetailViewController
             eventDetailVC.initializeViewModel(event: sender as! Event)
@@ -83,5 +92,11 @@ extension EventsTableViewController: UIViewControllerTransitioningDelegate {
     }
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return SlideInPresentationAnimator(direction: .right, isPresentation: false)
+    }
+}
+
+extension EventsTableViewController : FilterDelegate {
+    func filterApplied(cityFilter: [String]?, typeFilter: [String]?, sortBy: String?) {
+        
     }
 }

@@ -28,8 +28,11 @@ class Event: NSObject {
     let ticketCost: Int
     let eventImageUrl: String
     let isbooked : Bool
+    let eventDescription : String
+    let hostName : String
+    let hostPhoneNumber : String
     
-    init(name: String, address: String, location: String, guestList: [Guest], startDate: String, endDate: String, dressCode: String, ticketCost: Int, eventImageUrl: String,isBooked: Bool = false, isSoldOut: Bool = false) {
+    init(name: String, address: String, location: String, guestList: [Guest], startDate: String, endDate: String, dressCode: String, ticketCost: Int, eventImageUrl: String, eventDescription: String, hostName : String, hostPhoneNumber: String, isBooked: Bool = false, isSoldOut: Bool = false) {
         self.name = name
         self.address = address
         self.ticketCost = ticketCost
@@ -38,6 +41,9 @@ class Event: NSObject {
         self.isbooked = isBooked
         self.guestList = guestList
         self.eventImageUrl = eventImageUrl
+        self.eventDescription = eventDescription
+        self.hostName = hostName
+        self.hostPhoneNumber = hostPhoneNumber
         
         switch location.lowercased() {
         case "delhi":
