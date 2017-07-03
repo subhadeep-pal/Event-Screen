@@ -12,9 +12,11 @@ class EventsViewModel: NSObject {
     
     private var events: [Event] = []
     
+    private var guestList : [Guest] = []
+    
     override init() {
         
-        let guestList = [
+        guestList = [
             Guest(firstName: "Schubert", lastName: "Cardozo", desc: "Musician", imageUrl: "", age: 33, location: "Mumbai"),
             Guest(firstName: "Siddharth", lastName: "Mangharam", desc: "Floh Co-Founder", imageUrl: "", age: 33, location: "Bengaluru"),
             Guest(firstName: "Divya", lastName: "Kunnath", desc: "Floh Member", imageUrl: "", age: 29, location: "Pune"),
@@ -23,16 +25,16 @@ class EventsViewModel: NSObject {
             Guest(firstName: "Bill", lastName: "Gates", desc: "Billionare", imageUrl: "", age: 64, location: "Pune"),
             Guest(firstName: "Mark", lastName: "Zukerburg", desc: "Social Activist", imageUrl: "", age: 32, location: "Delhi")]
         
-        events = [
-            Event(name: "For the love of coffee!", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-07-29 19:30:00", endDate: "2017-07-29 21:30:00", dressCode: "Smart Casuals", ticketCost: 700, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216"),
-            Event(name: "Aero India 2017", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-06-20 11:00:00", endDate: "2017-06-20 21:30:00", dressCode: "Smart Casuals", ticketCost: 1000, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216", isBooked: true),
-            Event(name: "Hot air balloon safari", address: "XYZ Street", location: "Pune", guestList: guestList, startDate: "2017-06-19 11:00:00", endDate: "2017-06-19 13:00:00", dressCode: "Smart Casuals", ticketCost: 200, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216", isSoldOut: true),
-            Event(name: "For the love of coffee!", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-08-02 19:30:00", endDate: "2017-08-02 21:30:00", dressCode: "Smart Casuals", ticketCost: 300, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216"),
-            Event(name: "Aero India 2017", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-06-21 11:00:00", endDate: "2017-06-21 21:30:00", dressCode: "Smart Casuals", ticketCost: 600, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216"),
-            Event(name: "Hot air balloon safari", address: "XYZ Street", location: "Pune", guestList: guestList, startDate: "2017-12-12 11:00:00", endDate: "2017-12-12 13:00:00", dressCode: "Smart Casuals", ticketCost: 1500, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216", isSoldOut: true),
-            
-        ]
-        
+//        events = [
+//            Event(name: "For the love of coffee!", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-07-29 19:30:00", endDate: "2017-07-29 21:30:00", dressCode: "Smart Casuals", ticketCost: 700, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216"),
+//            Event(name: "Aero India 2017", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-06-20 11:00:00", endDate: "2017-06-20 21:30:00", dressCode: "Smart Casuals", ticketCost: 1000, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216", isBooked: true),
+//            Event(name: "Hot air balloon safari", address: "XYZ Street", location: "Pune", guestList: guestList, startDate: "2017-06-19 11:00:00", endDate: "2017-06-19 13:00:00", dressCode: "Smart Casuals", ticketCost: 200, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216", isSoldOut: true),
+//            Event(name: "For the love of coffee!", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-08-02 19:30:00", endDate: "2017-08-02 21:30:00", dressCode: "Smart Casuals", ticketCost: 300, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216"),
+//            Event(name: "Aero India 2017", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-06-21 11:00:00", endDate: "2017-06-21 21:30:00", dressCode: "Smart Casuals", ticketCost: 600, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216"),
+//            Event(name: "Hot air balloon safari", address: "XYZ Street", location: "Pune", guestList: guestList, startDate: "2017-12-12 11:00:00", endDate: "2017-12-12 13:00:00", dressCode: "Smart Casuals", ticketCost: 1500, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216", isSoldOut: true),
+//            
+//        ]
+//        
     }
     
     
@@ -41,38 +43,48 @@ class EventsViewModel: NSObject {
     }
     
     func nameForEvent(index: Int) -> String {
-        return events[index].name.uppercased()
+        if let title = events[index].title {
+            return title.uppercased()
+        }
+        return ""
     }
     
     func timeForEvent(index: Int) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "hh:mm a"
-        return dateFormatter.string(from: events[index].startDate)
+        if let startDate = events[index].startDate {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "hh:mm a"
+            return dateFormatter.string(from: startDate)
+        }
+        return ""
     }
     
     func dateForEvent(index: Int) -> String {
         
-        let startDate = events[index].startDate
-        
-        let calendar = Calendar.current
-        if calendar.isDateInToday(startDate) {
-            return "TODAY"
-        } else if  calendar.isDateInTomorrow(startDate) {
-            return "TOMORROW"
-        } else {
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "E, d MMM"
-            let dateStr = dateFormatter.string(from: startDate)
-            return dateStr.uppercased()
+        if let startDate = events[index].startDate {
+            let calendar = Calendar.current
+            if calendar.isDateInToday(startDate) {
+                return "TODAY"
+            } else if  calendar.isDateInTomorrow(startDate) {
+                return "TOMORROW"
+            } else {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "E, d MMM"
+                let dateStr = dateFormatter.string(from: startDate)
+                return dateStr.uppercased()
+            }
         }
+        return ""
     }
     
+    
     func locationForEvent(index: Int) -> String {
-        return "\(events[index].location)".uppercased()
+        if let location = events[index].location {
+            return location.uppercased()
+        }
+        return "Bengaluru"
     }
     
     func guestAttentingDescriptionForEvent(index: Int) -> String {
-        let guestList = events[index].guestList
         
         if guestList.count == 0 {
             return ""

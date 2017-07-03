@@ -34,6 +34,7 @@
 		7A71564B1EF1178D002ECFDC /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A71564A1EF1178D002ECFDC /* SlideInPresentationAnimator.swift */; };
 		7A7156511EF15269002ECFDC /* FilterEventsSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7A7156501EF15269002ECFDC /* FilterEventsSectionHeader.xib */; };
 		7A7156531EF15373002ECFDC /* FilterEventsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7156521EF15373002ECFDC /* FilterEventsSectionHeader.swift */; };
+		7AC4208F1F0A10C50011EF02 /* EventsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4208E1F0A10C50011EF02 /* EventsWebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		7A71564A1EF1178D002ECFDC /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
 		7A7156501EF15269002ECFDC /* FilterEventsSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterEventsSectionHeader.xib; sourceTree = "<group>"; };
 		7A7156521EF15373002ECFDC /* FilterEventsSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterEventsSectionHeader.swift; sourceTree = "<group>"; };
+		7AC4208E1F0A10C50011EF02 /* EventsWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsWebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				7A71564E1EF15246002ECFDC /* View Model */,
 				7A71564F1EF1524D002ECFDC /* Model */,
 				7A7156431EF1103F002ECFDC /* Filter */,
+				7AC4208E1F0A10C50011EF02 /* EventsWebService.swift */,
 			);
 			name = "Events View";
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				7A71564B1EF1178D002ECFDC /* SlideInPresentationAnimator.swift in Sources */,
 				14D962591EF44C3700242FB1 /* DetailViewController.swift in Sources */,
 				7A7156391EEFE80D002ECFDC /* Event.swift in Sources */,
+				7AC4208F1F0A10C50011EF02 /* EventsWebService.swift in Sources */,
 				7A7156371EEFE801002ECFDC /* EventsViewModel.swift in Sources */,
 				1426BF781EF6556E00375EBD /* GuestListTableViewCell.swift in Sources */,
 				7A71563E1EF0176C002ECFDC /* EventsTableViewController.swift in Sources */,

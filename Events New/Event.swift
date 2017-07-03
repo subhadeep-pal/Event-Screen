@@ -17,51 +17,71 @@ public enum Location: String {
 
 class Event: NSObject {
     
-    let name: String
-    let address: String
-    let location: Location
-    let guestList: [Guest]
-    let startDate: Date
-    let endDate: Date
-    let isSoldOut: Bool
-    let dressCode: String
-    let ticketCost: Int
-    let eventImageUrl: String
-    let isbooked : Bool
-    let eventDescription : String
-    let hostName : String
-    let hostPhoneNumber : String
+    var id : Int?
+    var title : String?
+    var desc : String?
+    var summary : String?
+    var venue : String?
+    var image_url : String?
+    var conducted_by : String?
+    var vacancy_status : String?
+    var fee : Int?
+    var bookmarked_member_attendance_count : Int?
+    var member_purchase_status : String?
+    var date_and_time : String?
+    var city : String?
+    var location : String?
+    var dress_code : String?
+    var host_name : String?
+    var host_phone : String?
+    var location_marker : String?
+    var instructions : String?
+    var full_address : String?
+    var instructions_as_html : String?
+    var disclaimer_as_html : String?
     
-    init(name: String, address: String, location: String, guestList: [Guest], startDate: String, endDate: String, dressCode: String, ticketCost: Int, eventImageUrl: String, eventDescription: String, hostName : String, hostPhoneNumber: String, isBooked: Bool = false, isSoldOut: Bool = false) {
-        self.name = name
-        self.address = address
-        self.ticketCost = ticketCost
-        self.dressCode = dressCode
-        self.isSoldOut = isSoldOut
-        self.isbooked = isBooked
-        self.guestList = guestList
-        self.eventImageUrl = eventImageUrl
-        self.eventDescription = eventDescription
-        self.hostName = hostName
-        self.hostPhoneNumber = hostPhoneNumber
-        
-        switch location.lowercased() {
-        case "delhi":
-            self.location = .Delhi
-        case "bengaluru":
-            self.location = .Bengaluru
-        case "mumbai":
-            self.location = .Mumbai
-        case "pune":
-            self.location = .Pune
-        default:
-            self.location = .Bengaluru
+    var startDate : Date? {
+        if let dateString = date_and_time {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "YYYY-MM-dd'T'HH:mm:ss'.000'ZZZZZ"
+            return dateFormatter.date(from: dateString)
         }
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        self.startDate = dateFormatter.date(from: startDate)!
-        self.endDate = dateFormatter.date(from: endDate)!
+        return nil
     }
+    
+    
+    var isSoldOut : Bool {
+        if let member_purchase_status = member_purchase_status,
+            member_purchase_status == "sold_out" {
+            return true
+        }
+        return false
+    }
+    
+    required public init?(dictionary: [String:Any]) {
+        
+        id = dictionary["id"] as? Int
+        title = dictionary["title"] as? String
+        desc = dictionary["description"] as? String
+        summary = dictionary["summary"] as? String
+        venue = dictionary["venue"] as? String
+        image_url = dictionary["image_url"] as? String
+        conducted_by = dictionary["conducted_by"] as? String
+        vacancy_status = dictionary["vacancy_status"] as? String
+        fee = dictionary["fee"] as? Int
+        bookmarked_member_attendance_count = dictionary["bookmarked_member_attendance_count"] as? Int
+        member_purchase_status = dictionary["member_purchase_status"] as? String
+        date_and_time = dictionary["date_and_time"] as? String
+        city = dictionary["city"] as? String
+        location = dictionary["location"] as? String
+        dress_code = dictionary["dress_code"] as? String
+        host_name = dictionary["host_name"] as? String
+        host_phone = dictionary["host_phone"] as? String
+        location_marker = dictionary["location_marker"] as? String
+        instructions = dictionary["instructions"] as? String
+        full_address = dictionary["full_address"] as? String
+        instructions_as_html = dictionary["instructions_as_html"] as? String
+        disclaimer_as_html = dictionary["disclaimer_as_html"] as? String
+    }
+    
 }
