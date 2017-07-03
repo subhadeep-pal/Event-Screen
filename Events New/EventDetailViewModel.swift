@@ -21,23 +21,23 @@ class EventDetailViewModel: NSObject {
     }
     
     func eventName() -> String {
-        return event.name
+        return event.title!
     }
     
     func eventDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, dd MMMM"
-        return dateFormatter.string(from: event.startDate)
+        return dateFormatter.string(from: event.startDate!)
     }
     
     func eventTime() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm a"
-        return "\(dateFormatter.string(from: event.startDate)) - \(dateFormatter.string(from: event.endDate))"
+        return "\(dateFormatter.string(from: event.startDate!)) - \(dateFormatter.string(from: event.startDate!))"
     }
     
     func isEventBooked() -> Bool {
-        return event.isbooked
+        return false
     }
     
     func getEvent() -> Event {

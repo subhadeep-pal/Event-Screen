@@ -10,6 +10,10 @@
 		1426BF781EF6556E00375EBD /* GuestListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426BF771EF6556E00375EBD /* GuestListTableViewCell.swift */; };
 		1426BF7A1EF6747300375EBD /* UIImageViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426BF791EF6747300375EBD /* UIImageViewX.swift */; };
 		1426BF7C1EF6955700375EBD /* UIButtonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1426BF7B1EF6955700375EBD /* UIButtonX.swift */; };
+		14465E911F0AD15500889DED /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14465E8F1F0AD15500889DED /* Realm.framework */; };
+		14465E921F0AD15500889DED /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14465E8F1F0AD15500889DED /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		14465E931F0AD15500889DED /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14465E901F0AD15500889DED /* RealmSwift.framework */; };
+		14465E941F0AD15500889DED /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 14465E901F0AD15500889DED /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		14A56AAB1EF3157B0051FBC3 /* GuestListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A56AAA1EF3157B0051FBC3 /* GuestListViewController.swift */; };
 		14D962581EF44C3700242FB1 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D962551EF44C3700242FB1 /* DetailsViewModel.swift */; };
 		14D962591EF44C3700242FB1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D962561EF44C3700242FB1 /* DetailViewController.swift */; };
@@ -37,10 +41,27 @@
 		7AC4208F1F0A10C50011EF02 /* EventsWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC4208E1F0A10C50011EF02 /* EventsWebService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		14465E951F0AD15500889DED /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				14465E941F0AD15500889DED /* RealmSwift.framework in Embed Frameworks */,
+				14465E921F0AD15500889DED /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1426BF771EF6556E00375EBD /* GuestListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestListTableViewCell.swift; sourceTree = "<group>"; };
 		1426BF791EF6747300375EBD /* UIImageViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewX.swift; sourceTree = "<group>"; };
 		1426BF7B1EF6955700375EBD /* UIButtonX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonX.swift; sourceTree = "<group>"; };
+		14465E8F1F0AD15500889DED /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		14465E901F0AD15500889DED /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		14A56AAA1EF3157B0051FBC3 /* GuestListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestListViewController.swift; sourceTree = "<group>"; };
 		14D962551EF44C3700242FB1 /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		14D962561EF44C3700242FB1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14465E931F0AD15500889DED /* RealmSwift.framework in Frameworks */,
+				14465E911F0AD15500889DED /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +164,8 @@
 		7A7156151EEFE7A7002ECFDC = {
 			isa = PBXGroup;
 			children = (
+				14465E8F1F0AD15500889DED /* Realm.framework */,
+				14465E901F0AD15500889DED /* RealmSwift.framework */,
 				7A7156201EEFE7A7002ECFDC /* Events New */,
 				7A71561F1EEFE7A7002ECFDC /* Products */,
 			);
@@ -255,6 +280,8 @@
 				7A71561A1EEFE7A7002ECFDC /* Sources */,
 				7A71561B1EEFE7A7002ECFDC /* Frameworks */,
 				7A71561C1EEFE7A7002ECFDC /* Resources */,
+				14465E951F0AD15500889DED /* Embed Frameworks */,
+				14465E961F0AD17600889DED /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -313,6 +340,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14465E961F0AD17600889DED /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7A71561A1EEFE7A7002ECFDC /* Sources */ = {
@@ -466,6 +509,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DSRD6624UQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Events New/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -480,6 +527,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DSRD6624UQ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Events New/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
