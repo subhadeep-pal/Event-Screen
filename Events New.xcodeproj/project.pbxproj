@@ -197,11 +197,11 @@
 		7A71563A1EEFE813002ECFDC /* Events View */ = {
 			isa = PBXGroup;
 			children = (
+				7AC4208E1F0A10C50011EF02 /* EventsWebService.swift */,
 				7A71564D1EF1523F002ECFDC /* View */,
 				7A71564E1EF15246002ECFDC /* View Model */,
 				7A71564F1EF1524D002ECFDC /* Model */,
 				7A7156431EF1103F002ECFDC /* Filter */,
-				7AC4208E1F0A10C50011EF02 /* EventsWebService.swift */,
 			);
 			name = "Events View";
 			sourceTree = "<group>";
