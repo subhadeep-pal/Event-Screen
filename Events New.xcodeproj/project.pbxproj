@@ -18,6 +18,8 @@
 		14D962581EF44C3700242FB1 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D962551EF44C3700242FB1 /* DetailsViewModel.swift */; };
 		14D962591EF44C3700242FB1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D962561EF44C3700242FB1 /* DetailViewController.swift */; };
 		14D9625A1EF44C3700242FB1 /* EventDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D962571EF44C3700242FB1 /* EventDetailViewModel.swift */; };
+		14ECCD361F16891A00C69051 /* API Endpoints.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14ECCD351F16891A00C69051 /* API Endpoints.plist */; };
+		14ECCD381F168AF200C69051 /* WebserviceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14ECCD371F168AF200C69051 /* WebserviceConstants.swift */; };
 		14EE6F6B1EF1992E00D93F20 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */; };
 		14EE6F6D1EF1B64400D93F20 /* UIViewX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */; };
 		14EE6F8F1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EE6F8E1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift */; };
@@ -66,6 +68,8 @@
 		14D962551EF44C3700242FB1 /* DetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		14D962561EF44C3700242FB1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		14D962571EF44C3700242FB1 /* EventDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewModel.swift; sourceTree = "<group>"; };
+		14ECCD351F16891A00C69051 /* API Endpoints.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "API Endpoints.plist"; sourceTree = "<group>"; };
+		14ECCD371F168AF200C69051 /* WebserviceConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebserviceConstants.swift; sourceTree = "<group>"; };
 		14EE6F6A1EF1992E00D93F20 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewX.swift; sourceTree = "<group>"; };
 		14EE6F8E1EF30B3A00D93F20 /* UnbookedEventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnbookedEventDetailViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				14EE6F6C1EF1B64400D93F20 /* UIViewX.swift */,
 				1426BF791EF6747300375EBD /* UIImageViewX.swift */,
 				1426BF7B1EF6955700375EBD /* UIButtonX.swift */,
+				14ECCD371F168AF200C69051 /* WebserviceConstants.swift */,
 			);
 			name = "Helper Classes";
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 		7A7156201EEFE7A7002ECFDC /* Events New */ = {
 			isa = PBXGroup;
 			children = (
+				14ECCD351F16891A00C69051 /* API Endpoints.plist */,
 				14EE6F8D1EF1BD7B00D93F20 /* Helper Classes */,
 				14EE6F6E1EF1BB8400D93F20 /* Event Details */,
 				7A71563A1EEFE813002ECFDC /* Events View */,
@@ -336,6 +342,7 @@
 				7A7156291EEFE7A7002ECFDC /* Assets.xcassets in Resources */,
 				7A7156271EEFE7A7002ECFDC /* Main.storyboard in Resources */,
 				7A7156511EF15269002ECFDC /* FilterEventsSectionHeader.xib in Resources */,
+				14ECCD361F16891A00C69051 /* API Endpoints.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +381,7 @@
 				14EE6F911EF30B4800D93F20 /* BookedEventDetailViewController.swift in Sources */,
 				7A71564B1EF1178D002ECFDC /* SlideInPresentationAnimator.swift in Sources */,
 				14D962591EF44C3700242FB1 /* DetailViewController.swift in Sources */,
+				14ECCD381F168AF200C69051 /* WebserviceConstants.swift in Sources */,
 				7A7156391EEFE80D002ECFDC /* Event.swift in Sources */,
 				7AC4208F1F0A10C50011EF02 /* EventsWebService.swift in Sources */,
 				7A7156371EEFE801002ECFDC /* EventsViewModel.swift in Sources */,

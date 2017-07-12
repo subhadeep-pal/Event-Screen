@@ -6,21 +6,12 @@
 //  Copyright © 2017 Subhadeep Pal. All rights reserved.
 //
 
-//        events = [
-//            Event(name: "For the love of coffee!", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-07-29 19:30:00", endDate: "2017-07-29 21:30:00", dressCode: "Smart Casuals", ticketCost: 700, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216"),
-//            Event(name: "Aero India 2017", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-06-20 11:00:00", endDate: "2017-06-20 21:30:00", dressCode: "Smart Casuals", ticketCost: 1000, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216", isBooked: true),
-//            Event(name: "Hot air balloon safari", address: "XYZ Street", location: "Pune", guestList: guestList, startDate: "2017-06-19 11:00:00", endDate: "2017-06-19 13:00:00", dressCode: "Smart Casuals", ticketCost: 200, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216", isSoldOut: true),
-//            Event(name: "For the love of coffee!", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-08-02 19:30:00", endDate: "2017-08-02 21:30:00", dressCode: "Smart Casuals", ticketCost: 300, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216"),
-//            Event(name: "Aero India 2017", address: "The Flying Squirrel", location: "Bengaluru", guestList: guestList, startDate: "2017-06-21 11:00:00", endDate: "2017-06-21 21:30:00", dressCode: "Smart Casuals", ticketCost: 600, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216"),
-//            Event(name: "Hot air balloon safari", address: "XYZ Street", location: "Pune", guestList: guestList, startDate: "2017-12-12 11:00:00", endDate: "2017-12-12 13:00:00", dressCode: "Smart Casuals", ticketCost: 1500, eventImageUrl: "", eventDescription : "Coffee lovers, unite! There's nothing like the perfect cup of coffee. The master brewers ar The Flying Squirrel know this too and they will give you their trade sercrets and make you a master brewer yourself.", hostName: "Siddharth Mangharam", hostPhoneNumber: "8420328216", isSoldOut: true),
-//
-//        ]
-//
-
 import UIKit
 import RealmSwift
 
 class EventsViewModel: NSObject {
+    
+    @IBOutlet weak var webService: EventsWebService!
     
     private var events: Results<Event>
     
@@ -57,12 +48,26 @@ class EventsViewModel: NSObject {
         
         realm = try! Realm()
 //        realm.beginWrite()
-//        realm.add(event)
+//        realm.deleteAll()
 //        try! realm.commitWrite()
         
         
         events = realm.objects(Event.self)
         
+    }
+    func fetchEvents(successCallback: @escaping ()->Void, failourCallback: @escaping (_ error: String) -> Void) {
+        webService.fetchEvents { (success, error, events) in
+            if success,
+                let events = events{
+                self.realm.beginWrite()
+                self.realm.add(events)
+                try! self.realm.commitWrite()
+                self.retrieveObjects(filterCity: nil)
+                successCallback()
+            } else {
+                failourCallback(error!)
+            }
+        }
     }
     
     func retrieveObjects(filterCity: String?) {

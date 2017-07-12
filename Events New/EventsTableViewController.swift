@@ -14,6 +14,7 @@ class EventsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        eventsViewModel.fetchEvents(successCallback: fetchEventsSuccess, failourCallback: fetchEventsFailour(error:))
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,6 +74,14 @@ class EventsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "eventDetailSegue", sender: eventsViewModel.eventForIndex(index: indexPath.row))
+    }
+    
+    func fetchEventsSuccess() {
+        tableView.reloadData()
+    }
+    
+    func fetchEventsFailour(error: String) {
+        
     }
     
 

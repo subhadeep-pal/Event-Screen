@@ -26,7 +26,7 @@ class Event: Object {
     dynamic var image_url : String?
     dynamic var conducted_by : String?
     dynamic var vacancy_status : String?
-    dynamic var fee : Int = 0
+    dynamic var fee : String?
     dynamic var bookmarked_member_attendance_count : Int = 0
     dynamic var member_purchase_status : String?
     dynamic var date_and_time : String?

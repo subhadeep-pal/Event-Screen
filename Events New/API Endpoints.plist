@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Endpoint</key>
+	<string>https://api.flohpre.in/v2</string>
+	<key>API Key</key>
+	<dict>
+		<key>value</key>
+		<string>ecb51124-70f4-4a3a-b43e-20f635cfae98</string>
+		<key>key</key>
+		<string>X-FLOH-KEY</string>
+	</dict>
+	<key>Access token</key>
+	<dict>
+		<key>key</key>
+		<string>X-ACCESS-TOKEN</string>
+		<key>value</key>
+		<string>de341d1d997e91de67b6c41866e96d6f</string>
+	</dict>
+	<key>Upcomming Events</key>
+	<string>/events/upcoming</string>
+	<key>Event Details</key>
+	<string>/events/</string>
+</dict>
+</plist>
