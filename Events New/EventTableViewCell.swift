@@ -17,6 +17,7 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var soldoutView: UIView!
     
+    @IBOutlet weak var eventImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +29,4 @@ class EventTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
 }

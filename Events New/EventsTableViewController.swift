@@ -51,6 +51,15 @@ class EventsTableViewController: UITableViewController {
             cell.soldoutView.isHidden = true
         }
         
+        if let image = ImageLoader.cache.object(forKey: eventsViewModel.imageUrl(index: indexPath.row) as AnyObject) as? Data{
+            let cachedImage = UIImage(data: image)
+            cell.eventImageView.image = cachedImage
+        } else {
+            let imageLoader = ImageLoader(delegate: self, indexPath: indexPath)
+            imageLoader.imageFromUrl(urlString: eventsViewModel.imageUrl(index: indexPath.row))
+            cell.eventImageView.image = #imageLiteral(resourceName: "placeholder_event")
+        }
+        
         return cell
     }
     
@@ -85,6 +94,14 @@ class EventsTableViewController: UITableViewController {
     }
     
 
+}
+
+extension EventsTableViewController: ImageLoaderProtocol {
+    func imageLoaded(image: UIImage, forIndexPath indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? EventTableViewCell {
+            cell.eventImageView.image = image
+        }
+    }
 }
 
 extension EventsTableViewController: UIViewControllerTransitioningDelegate {

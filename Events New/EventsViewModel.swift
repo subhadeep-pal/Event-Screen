@@ -30,22 +30,6 @@ class EventsViewModel: NSObject {
             Guest(firstName: "Bill", lastName: "Gates", desc: "Billionare", imageUrl: "", age: 64, location: "Pune"),
             Guest(firstName: "Mark", lastName: "Zukerburg", desc: "Social Activist", imageUrl: "", age: 32, location: "Delhi")]
         
-
-        
-//        let event = Event()
-//        
-//        event.city = "Bengaluru"
-//        event.conducted_by = "Subhadeep Pal"
-//        event.date_and_time = "2017-07-07T18:00:00.000+05:30"
-//        event.location = "Indiranagar"
-//        event.dress_code = "Smart Casuals"
-//        event.title = "Takes Two To Tango!"
-//        event.id = 549
-//        event.desc = "Ready for an andrenalin rush? Ladies and Gentlemen, presenting to you an evening of Tango! \nThere's nothing quite like Latin dance forms and Tango easily makes it to the top of that list. So if you've got the moves or want to hone your skills or just shake a leg (or two), join Floh members because it 'Takes Two to Tango'! If you have never danced before, even better! On Saturday, the weekend of 3rd September, 2016, let the great people of 'Bangalore Argentine Tango' up your twinkle-toes game. :)\nWhat are you waiting for? Sign up before those limited spots 'Tango' away! "
-//        event.venue = "Vibes - The Dance Lab"
-//        event.image_url = "https://floh-prestaging-uploads.s3-ap-south-1.amazonaws.com/event/549/cover_photo/large-f70f1410702dcbe40c061eaeb807a55f.png"
-//        event.member_purchase_status = "Sold out"
-        
         realm = try! Realm()
 //        realm.beginWrite()
 //        realm.deleteAll()
@@ -60,6 +44,7 @@ class EventsViewModel: NSObject {
             if success,
                 let events = events{
                 self.realm.beginWrite()
+                self.realm.deleteAll()
                 self.realm.add(events)
                 try! self.realm.commitWrite()
                 self.retrieveObjects(filterCity: nil)
@@ -142,6 +127,10 @@ class EventsViewModel: NSObject {
     
     func isEventSoldOut(index: Int) -> Bool {
        return events[index].isSoldOut
+    }
+    
+    func imageUrl(index: Int) -> String {
+        return events[index].image_url != nil ? events[index].image_url! : ""
     }
 
 }

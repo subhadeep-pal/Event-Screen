@@ -170,6 +170,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="dateLabel" destination="hGL-ju-VNg" id="AUb-OE-Urf"/>
+                                    <outlet property="eventImageView" destination="3CL-gp-m7k" id="v7i-Xl-ruU"/>
                                     <outlet property="eventNameLabel" destination="41u-C9-6K9" id="NeO-Vy-xTE"/>
                                     <outlet property="guestListLabel" destination="jwE-x2-L4l" id="PBv-jc-SGj"/>
                                     <outlet property="locationLabel" destination="bbb-E0-LSp" id="2Rd-vO-LOm"/>

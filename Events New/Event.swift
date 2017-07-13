@@ -59,30 +59,4 @@ class Event: Object {
         return false
     }
     
-//    required public init?(dictionary: [String:Any]) {
-//        
-//        id = dictionary["id"] != nil ? dictionary["id"] as! Int : 0
-//        title = dictionary["title"] as? String
-//        desc = dictionary["description"] as? String
-//        summary = dictionary["summary"] as? String
-//        venue = dictionary["venue"] as? String
-//        image_url = dictionary["image_url"] as? String
-//        conducted_by = dictionary["conducted_by"] as? String
-//        vacancy_status = dictionary["vacancy_status"] as? String
-//        fee = dictionary["fee"] != nil ? dictionary["fee"] as! Int : 0
-//        bookmarked_member_attendance_count = dictionary["bookmarked_member_attendance_count"] != nil ?dictionary["bookmarked_member_attendance_count"] as! Int : 0
-//        member_purchase_status = dictionary["member_purchase_status"] as? String
-//        date_and_time = dictionary["date_and_time"] as? String
-//        city = dictionary["city"] as? String
-//        location = dictionary["location"] as? String
-//        dress_code = dictionary["dress_code"] as? String
-//        host_name = dictionary["host_name"] as? String
-//        host_phone = dictionary["host_phone"] as? String
-//        location_marker = dictionary["location_marker"] as? String
-//        instructions = dictionary["instructions"] as? String
-//        full_address = dictionary["full_address"] as? String
-//        instructions_as_html = dictionary["instructions_as_html"] as? String
-//        disclaimer_as_html = dictionary["disclaimer_as_html"] as? String
-//    }
-    
 }
